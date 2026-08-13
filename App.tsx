@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, View, Image, useWindowDimensions, TouchableOpacity, Modal } from 'react-native';
+import { StyleSheet, Text, View, Image, useWindowDimensions, TouchableOpacity, Modal, ScrollView } from 'react-native';
 
 export default function App() {
   const {width, height} = useWindowDimensions();
@@ -23,16 +23,18 @@ export default function App() {
     require('./assets/sad-crying-black-guy.gif'),
     require('./assets/seal-cute.gif'),
     require('./assets/sealyx-naked-gun.gif'),
-    //require('./assets/oof-car.gif'),
     require('./assets/miyahaha-funny.gif'),
+    require('./assets/default-dance-fortnite.gif'),
+    require('./assets/hatsune-miku-honkai-star-rail.gif'),
+    require('./assets/hatsune-miku-mesmerizer.gif'),
   ]
 
   return (
     <View style={styles.container}>
-
       <Text style={styles.Text}>Gallery</Text>
       <StatusBar style="auto" />
 
+      <ScrollView>
         <View style={styles.RowContainer}>
           {images.map((image, index) => (
             <TouchableOpacity
@@ -55,6 +57,7 @@ export default function App() {
             </TouchableOpacity>
           ))}
         </View>
+      </ScrollView>
 
       <Modal
         visible={modalVisible}
@@ -87,9 +90,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 30,
+    marginLeft: 10,
   },
   Text: {
     marginBottom: 20,
+    fontSize: 25,
   },
   RowContainer: {
     flexDirection: 'row',
