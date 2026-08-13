@@ -1,11 +1,51 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, useWindowDimensions, TouchableOpacity } from 'react-native';
 
 export default function App() {
+  const {width, height} = useWindowDimensions();
+  const imageSize = (width - 40)/ 3;
+  const images = [
+    //require('./'),
+    require('./assets/agnes-tachyon-uma-musume.gif'),
+    {uri: 'https://i.redd.it/the-original-red-angry-bird-listening-meme-before-it-was-v0-dlfei8jnk2dg1.png?width=374&format=png&auto=webp&s=e081d3c2163943394808ae255fb609b9dbad26be'},
+    require('./assets/4910f6f9ef46a008da8319295f9516a9.gif'),
+    require('./assets/arknights-endfield.gif'),
+    require('./assets/momoi-momoi-saiba.gif'),
+    require('./assets/1000-aq.gif'),
+    require('./assets/cat-transcend.gif'),
+    require('./assets/dog-sims.gif'),
+    require('./assets/evernight-lonely.gif'),
+    require('./assets/oia-uia.gif'),
+    require('./assets/polish-cow-cow.gif'),
+    require('./assets/sad-crying-black-guy.gif'),
+    require('./assets/seal-cute.gif'),
+    require('./assets/sealyx-naked-gun.gif'),
+    //require('./assets/oof-car.gif'),
+    require('./assets/miyahaha-funny.gif'),
+  ]
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+
+      <Text style={styles.Text}>Gallery</Text>
       <StatusBar style="auto" />
+
+        <View style={styles.RowContainer}>
+          {images.map((image, index) => (
+              <Image
+                key={index}
+                source={image}
+                style={[
+                  styles.ImageContainer,
+                  {
+                    width: imageSize,
+                    height: imageSize,
+                  },
+                ]}
+              />
+          ))}
+        </View>
+
     </View>
   );
 }
@@ -16,5 +56,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  Text: {
+    marginBottom: 20,
+  },
+  RowContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',      // Allow items to wrap to the next row
+    justifyContent: 'flex-start',
+    padding: 10,
+  },
+  ImageContainer: {
+    marginBottom: 5,
   },
 });
