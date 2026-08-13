@@ -1,9 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, useWindowDimensions, TouchableOpacity } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, Text, View, Image, useWindowDimensions, TouchableOpacity, Modal } from 'react-native';
 
 export default function App() {
   const {width, height} = useWindowDimensions();
   const imageSize = (width - 40)/ 3;
+  const [selectedImage, setSelectedImage] = useState<number|{uri: string}|null>(null);
+  const [modalVisible, setModalVisible] = useState(false);
   const images = [
     //require('./'),
     require('./assets/agnes-tachyon-uma-musume.gif'),
@@ -33,6 +36,10 @@ export default function App() {
         <View style={styles.RowContainer}>
           {images.map((image, index) => (
             <TouchableOpacity
+              onPress={() => {
+                setSelectedImage(image);
+                setModalVisible(true);
+              }}
               key={index}
             >
               <Image
