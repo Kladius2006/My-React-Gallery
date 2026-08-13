@@ -24,7 +24,7 @@ export default function App() {
     require('./assets/seal-cute.gif'),
     require('./assets/sealyx-naked-gun.gif'),
     require('./assets/miyahaha-funny.gif'),
-    require('./assets/default-dance-fortnite.gif'),
+    require('./assets/ado-azula-diana.gif'),
     require('./assets/hatsune-miku-honkai-star-rail.gif'),
     require('./assets/hatsune-miku-mesmerizer.gif'),
   ]
