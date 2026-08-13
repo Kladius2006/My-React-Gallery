@@ -56,6 +56,27 @@ export default function App() {
           ))}
         </View>
 
+      <Modal
+        visible={modalVisible}
+        transparent={true}
+        animationType="fade"
+        onRequestClose={() => setModalVisible(false)}
+      >
+        <TouchableOpacity
+          style={styles.ModalContainer}
+          onPress={() => setModalVisible(false)}
+        >
+          {selectedImage&&(
+            <Image
+              source={selectedImage}
+              style={styles.FullImage}
+              resizeMode='contain'
+            />
+          )}
+
+        </TouchableOpacity>
+      </Modal>
+
     </View>
   );
 }
@@ -78,5 +99,15 @@ const styles = StyleSheet.create({
   },
   ImageContainer: {
     marginBottom: 5,
+  },
+  ModalContainer: {
+  flex: 1,
+  backgroundColor: 'rgba(0, 0, 0, 0.9)',
+  justifyContent: 'center',
+  alignItems: 'center',
+  },
+  FullImage: {
+  width: '90%',
+  height: '90%',
   },
 });
