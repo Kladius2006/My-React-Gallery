@@ -32,8 +32,10 @@ export default function App() {
 
         <View style={styles.RowContainer}>
           {images.map((image, index) => (
+            <TouchableOpacity
+              key={index}
+            >
               <Image
-                key={index}
                 source={image}
                 style={[
                   styles.ImageContainer,
@@ -43,6 +45,7 @@ export default function App() {
                   },
                 ]}
               />
+            </TouchableOpacity>
           ))}
         </View>
 
