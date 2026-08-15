@@ -1,0 +1,22 @@
+const audio: (number | null)[] = [ //require('../'),
+  require('../assets/audio/AgnesTachyonLowCortisol.mp3'),
+  null,
+  null,
+  null,
+  null,
+  require('../assets/audio/Galaxy Brain Meme _ Remastered [1080p60].mp3'),
+  null,
+  null,
+  require('../assets/audio/Lonely Lonely - Vintage (TikTok Version).mp3'),
+  null,
+  require('../assets/audio/Polish cow (English Lyrics).mp3'),
+  null,
+  null,
+  null,
+  require('../assets/audio/ORIGINAL Numa Numa (UNEDITED).mp3'),
+  require('../assets/audio/I animated her to cheer you up!.mp3'),
+  null,
+  null,
+];
+
+export default audio;

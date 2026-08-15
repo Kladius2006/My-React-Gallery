@@ -1,0 +1,22 @@
+const images = [ //require('../'),
+    require('../assets/image/agnes-tachyon-uma-musume.gif'),
+    {uri: 'https://i.redd.it/the-original-red-angry-bird-listening-meme-before-it-was-v0-dlfei8jnk2dg1.png?width=374&format=png&auto=webp&s=e081d3c2163943394808ae255fb609b9dbad26be'},
+    require('../assets/image/4910f6f9ef46a008da8319295f9516a9.gif'),
+    require('../assets/image/arknights-endfield.gif'),
+    require('../assets/image/momoi-momoi-saiba.gif'),
+    require('../assets/image/1000-aq.gif'),
+    require('../assets/image/cat-transcend.gif'),
+    require('../assets/image/dog-sims.gif'),
+    require('../assets/image/evernight-lonely.gif'),
+    require('../assets/image/oia-uia.gif'),
+    require('../assets/image/polish-cow-cow.gif'),
+    require('../assets/image/sad-crying-black-guy.gif'),
+    require('../assets/image/seal-cute.gif'),
+    require('../assets/image/sealyx-naked-gun.gif'),
+    require('../assets/image/miyahaha-funny.gif'),
+    require('../assets/image/ado-azula-diana.gif'),
+    require('../assets/image/hatsune-miku-honkai-star-rail.gif'),
+    require('../assets/image/hatsune-miku-mesmerizer.gif'),
+]
+
+export default images;
