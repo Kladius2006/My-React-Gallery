@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useAudioPlayer } from 'expo-audio';
 import { useState } from 'react';
-import { StyleSheet, Text, View, Image, useWindowDimensions, TouchableOpacity, Modal, ScrollView } from 'react-native';
+import { Text, View, Image, useWindowDimensions, TouchableOpacity, Modal, ScrollView } from 'react-native';
 import images from './data/Image';
 import audio from './data/Audio';
 import styles from './data/Style';
